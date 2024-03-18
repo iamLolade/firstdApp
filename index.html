@@ -8,18 +8,36 @@
 
     <style>
         body {
-          text-align: center;
           font-family: Arial, Helvetica, sans-serif;
+          min-height: 100vh;
+          overflow: hidden;
         }
       
         div {
           width: 20%;
-          margin: 0 auto;
+          margin: 30px auto;
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          height: 100% !important;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            text-align: left;
+        }
+
+        input {
+            height: 30px;
+            border-radius: 6px;
+            border: 1px solid #ddd
         }
 
         section {
+            margin-top: 10px;
             display: flex;
             gap: 8px;
         }
@@ -27,19 +45,25 @@
         button {
           width: 100%;
           margin: 10px 0px 5px 0px;
+          border: none;
+          padding: 1em;
+          border-radius: 6px;
+          font-weight: 600;
+          color: #fff;
+          background: rgb(40, 140, 211);
         }
       </style>
   </head>
   <body>
     <div>
-      <h1>This is my dApp!</h1>
+      <h1>Mood-ifier!</h1>
       <p>Here we can set or get the mood:</p>
       <label for="mood">Input Mood:</label> <br />
       <input type="text" id="mood" />
         
       <section>
-          <button onclick="getMood()">Get Mood</button>
-            <button onclick="setMood()">Set Mood</button>
+          <button style="background: #fff; border: 2px solid rgb(40, 140, 211); color: rgb(40, 140, 211)" onclick="getMood()">Get Mood</button>
+          <button onclick="setMood()">Set Mood</button>
       </section>
       <p id="showMood"></p>
     </div>
